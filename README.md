@@ -2,6 +2,8 @@
 
 Optivision is a revolutionary image tagging and face detection platform that leverages cutting-edge artificial intelligence (AI) and machine learning technologies to transform your visual content. Optivision is designed to enhance your images with descriptive tags, providing a sophisticated image tagging service that brings unparalleled precision and context to your digital assets. 
 
+![Optivision](https://github.com/atisamhaq123/Optivision/blob/main/Image/capture.PNG)
+
 ## API settings:
 
   - Get API from [Imagga](https://imagga.com/).
