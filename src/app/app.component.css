@@ -1,0 +1,311 @@
+@import "~font-awesome/css/font-awesome.css";
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "quantum";
+    src: url("../assets/fonts/quantum.ttf") ;
+    }
+@font-face {
+      font-family: "Despair";
+    src: url("../assets/fonts/Despairs-X3Wxo.ttf") ;
+      }
+
+.sign,.nav-item{
+  font-family: 'quantum';
+  
+}
+.navbar{
+  background-color: #141414!important;
+
+ }
+ .nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item:hover .nav-link {
+  color: whitesmoke !important;
+}
+
+
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: transparent; /* Set the initial underline color to transparent */
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5); /* Add a shadow effect */
+  transition: width 0.4s ease-out, transform 0.3s ease-out, background-color 0.4s ease-out, box-shadow 0.4s ease-out;
+  visibility: hidden;
+}
+
+.nav-item:hover::before {
+  width: 100%;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-3px); /* Slightly move up by -3px on hover */
+  background-color: #ffe6ff; /* Set the underline color on hover */
+  box-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483; /* Set the box-shadow on hover */
+}
+
+
+
+
+
+ .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    margin-left:5px ;
+    text-align: center;
+ }
+ .navbar-toggler-icon{
+    color: red !important;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+
+ @media (max-width: 300px) {
+    /* Apply styles to .sign when .navbar-toggler is focused */
+    .sign{
+        font-size: 1.6em !important;
+        margin-left: 49px !important;
+      
+    } 
+   
+  }
+  
+  @media (min-width: 300px) and (max-width: 500px) {
+    /* Apply styles to .sign when .navbar-toggler is focused */
+    .sign{
+        font-size: 1.9em !important;
+        margin-left: 55px !important;
+    }
+   
+ 
+    
+  }
+  .navbar-toggler{
+    border: 0px;
+  }
+  @media (min-width: 500px) and (max-width: 800px){
+    /* Apply styles to .sign when .navbar-toggler is focused */
+    .sign{
+        font-size: 1.9em !important;
+        margin-left: 61px !important;
+    
+    }
+   
+
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+
+  .sign {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    letter-spacing: 5;
+    margin-left: 61px;
+  
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #ffe6ff;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+ 
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+ 
+/* CSS to style the circular background div */
+.icon-circle {
+  width: 40px; /* Adjust the width and height as needed for your design */
+  height: 40px;
+  background-color: #333; /* Background color for the circle */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Optional: Add a hover effect */
+  float: left; /* Add this to make them display in a row */
+  margin-right: 20px; /* Increase spacing between icons */
+}
+
+.icon-circle:last-child {
+  margin-right: 10; /* Remove right margin for the last icon */
+}
+
+.icon-circle:hover {
+  background-color: #555; /* Change the background color on hover */
+}

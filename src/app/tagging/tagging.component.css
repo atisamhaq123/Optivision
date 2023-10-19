@@ -1,0 +1,477 @@
+
+html,body{
+  /* background-color: #141414; */
+  background-color: black;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: white;
+  /* font-family: serif; */
+  font-family: quantum;
+  font-size: 0.9em;
+  min-height: 90vh
+  
+}
+
+/* Style for the "Copy" text */
+.result-section {
+  padding: 5px 10px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+/* Style for the "Copy" text when hovered */
+.result-section:hover {
+  background-color: #2980b9;
+}
+
+
+
+
+.tag-container {
+  margin-bottom: 20px;
+}
+.results{
+  margin-top: -5px;
+  height: 79vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+/* Style the scrollbar */
+.results::-webkit-scrollbar {
+  width: 3px; /* Adjust the scrollbar width */
+}
+
+/* Track (the background) */
+.results::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background color of the track */
+}
+
+/* Handle (the draggable part) */
+.results::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 0, 179); /* Set the background color of the thumb */
+  -webkit-box-shadow: 0 0 0.1rem rgb(255, 0, 212); /* Apply the box-shadow */
+  border-radius: 4px; /* Round the corners of the thumb */
+}
+
+
+/* Handle on hover */
+.results::-webkit-scrollbar-thumb:hover {
+  background: #333; /* Color of the scrollbar handle on hover */
+}
+.tag-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Updated .confidence-bar styles for loading animation */
+.confidence-bar {
+  height: 4px;
+  background-color: transparent; /* Set the underline color on hover */
+  width: 0; /* Initial width set to 0 */
+  transition: width 2s ease-in-out; /* Adjust the transition duration as needed */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative; /* Add position relative for pseudo-element */
+}
+
+.confidence-bar::before {
+  content: '';
+  background-color: rgb(20, 214, 228); /* Set the underline color on hover */
+  box-shadow: 0 0 0.6rem rgb(27, 213, 226);
+  height: 100%;
+  border-radius: 5px;
+  position: absolute; /* Add position absolute to overlay the loading bar */
+  top: 0;
+  left: 0;
+  width: 0; /* Initial width set to 0 */
+  animation: load 2s ease-in-out forwards; /* Adjust the animation duration as needed */
+}
+
+@keyframes load {
+  to {
+    width: 100%; /* Animate width to 100% */
+  }
+}
+/* Add a CSS animation for the number */
+@keyframes animateNumber {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.showimage{
+  margin: auto;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 991px) and (max-width: 1217px){
+  /* Apply styles to .sign when .navbar-toggler is focused */
+  .upload-text{
+      font-size: 8px !important;  
+  } 
+ 
+}
+/* Style small screens */
+@media (max-width: 991px){
+  /* Apply styles to .sign when .navbar-toggler is focused */
+  .upload-text{
+      font-size: 18px !important;  
+  } 
+  .upload-container {
+    min-height: 150px !important;
+    min-width: 100px !important;
+    background-size: cover; /* Adjust the background-size property as needed */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .Analyze{
+    display: flex;
+    justify-content: center;
+  }
+  .mesmerizing-button {
+    padding: 15px 25px !important;
+    border-radius: 50px !important; /* Circular shape for the button */
+
+  }
+  .button-text{
+    font-size: 15px;
+  }
+ 
+}
+/* Drag or Browse */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #3deffc;
+  cursor: pointer;
+  width: auto !important;
+  background-color: transparent !important;
+  min-height: 100px;
+  max-width: 100%;
+  height: auto;
+  padding: 2vh;
+  font-size: 12px;
+  animation: breathing 3s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+
+.upload-container.dragging {
+  background-color: #f0f0f0;
+}
+
+.upload-text{
+  margin: auto;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Drag or Browse */
+
+/* Reset default list styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the image gallery container */
+.image-gallery {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2vh;
+ /* background-color: #f0f0f0;  Background color for the container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 90vh;
+}
+
+/* Style the list items (image thumbnails) */
+.image-gallery ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Style the images */
+.image-gallery ul li img {
+  max-width: 100%;
+  height: auto;
+  /*border: 2px solid #fff;  Add a border around each image */
+  transition: transform 0.2s ease-in-out; /* Add a hover effect */
+  box-shadow: 0px 0px 10px rgba(246, 246, 248, 0.2);
+  border: 1px solid #3deffc;
+}
+
+/* Hover effect for images */
+.image-gallery ul li img:hover {
+  transform: scale(1.05); /* Scale the image slightly on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+/* Style the scrollbar */
+.image-gallery::-webkit-scrollbar {
+  width: 3px; /* Adjust the scrollbar width */
+}
+
+/* Track (the background) */
+.image-gallery::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background color of the track */
+}
+
+/* Handle (the draggable part) */
+.image-gallery::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 0, 179); /* Set the background color of the thumb */
+  -webkit-box-shadow: 0 0 0.1rem rgb(255, 0, 212); /* Apply the box-shadow */
+  border-radius: 4px; /* Round the corners of the thumb */
+}
+
+
+/* Handle on hover */
+.image-gallery::-webkit-scrollbar-thumb:hover {
+  background: #333; /* Color of the scrollbar handle on hover */
+}
+.upload-container:hover{
+  background-color: #f0f0f0;
+  transform: scale(1.05); /* Scale the image slightly on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+/* loading */
+.loading {
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+svg {
+  position: relative;
+  margin-top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+}
+
+svg path {
+  fill: none;
+  stroke-width: 5;
+  stroke: #63ffff;
+  stroke-dasharray: 0 400;
+  stroke-linecap: round;
+  stroke-dashoffset: 400;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+svg .frame circle {
+  stroke-width: 5;
+  stroke: #63ffff;
+  fill: none;
+}
+svg .frame circle:nth-of-type(1) {
+  stroke: #001875;
+  filter: url(#blur);
+}
+svg .frame circle:nth-of-type(3) {
+  stroke-width: 4;
+  stroke: #1942a8;
+}
+svg .horizline circle {
+  stroke-width: 4;
+  stroke: #63ffff;
+  fill: none;
+  animation: horizontalmove 2s linear infinite;
+}
+svg .horizline circle:nth-of-type(6) {
+  animation: horizontalmovedisappear 2s linear infinite;
+}
+svg .horizline circle:nth-of-type(1) {
+  filter: url(#blur);
+  stroke-width: 2;
+  stroke: #001875;
+}
+svg .horizline circle:nth-of-type(2) {
+  filter: url(#blur);
+  stroke-width: 2;
+  stroke: #001875;
+}
+svg .horizline circle:nth-of-type(3) {
+  filter: url(#blur);
+  stroke-width: 2;
+  stroke: #001875;
+  animation: horizontalmovedisappear 2s linear infinite;
+}
+@keyframes move {
+  0%, 66% {
+    stroke-dashoffset: 30;
+    stroke-dasharray: 30 157;
+ }
+  100% {
+    stroke-dashoffset: -157;
+    stroke-dasharray: 30 157;
+ }
+}
+@keyframes horizontalmove {
+  100% {
+    transform: translate(33px);
+ }
+}
+@keyframes horizontalmovedisappear {
+  70% {
+    opacity: 1;
+ }
+  71% {
+    opacity: 0;
+ }
+  100% {
+    opacity: 0;
+    transform: translate(33px);
+ }
+}
+
+/* analyze */
+.mesmerizing-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #3deffc; /* Text color for the button */
+  font-size: 15px;
+  margin-right: 10px;
+  padding: 15px 30px;
+  border-radius: 50px; /* Circular shape for the button */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 800px) and (max-width: 991px){
+  /* Apply styles to .sign when .navbar-toggler is focused */
+  .mesmerizing-button{
+      font-size: 12px !important;  
+      padding: 12px 24px;
+  } 
+ 
+}
+@media (min-width: 600px) and (max-width: 800px){
+  /* Apply styles to .sign when .navbar-toggler is focused */
+  .mesmerizing-button{
+      font-size: 11px !important;  
+      padding: 10px 20px;
+  } 
+ 
+}
+@media (max-width: 500px){
+  /* Apply styles to .sign when .navbar-toggler is focused */
+  .mesmerizing-button{
+      font-size: 10px !important;  
+      padding: 10px 20px;
+  } 
+ 
+}
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 0%, #11ee6d 60%);
+  opacity: 0;
+  animation: glow 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.mesmerizing-button:hover .pulse-ring {
+  animation: none;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+.mesmerizing-button:hover .glow {
+  animation: none;
+  opacity: 0.8;
+}
+
+
+.result-section{
+  background-color: aliceblue;
+  color: #060607;
+  font-weight:bold;
+  padding: 10px;
+  font-size:15px;
+  border-radius: 10px;
+  
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="logo">
+    <div class="sign">
+      <span class="fast-flicker">O</span>pti<span class="flicker"> V </span>isi<span class="flicker"> o </span>n
+    </div>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end onoff" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" (click)='off()'>&nbsp;Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Tagging" (click)='off()'>&nbsp;Tagging</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Detection" (click)='off()'>&nbsp;Face Detection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Contact" (click)='off()'>&nbsp;Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <router-outlet></router-outlet>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 Optivision. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          
+            <a href="https://www.instagram.com/atisam_ulhaq" class="text-white me-3">
+              <div class="icon-circle">
+                <i class="fa fa-instagram"></i>
+              </div>
+            </a>
+       
+          <a href="https://www.facebook.com/atisam.ulhaq.12/" class="text-white me-3">
+            <div class="icon-circle">
+              <i class="fa fa-facebook"></i>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/atisam-ul-haq-643584154/" class="text-white me-3">
+            <div class="icon-circle">
+              <i class="fa fa-linkedin"></i>
+            </div>
+          </a>
+          <a href="https://github.com/atisamhaq123" class="text-white">
+            <div class="icon-circle">
+              <i class="fa fa-github"></i>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
+
+
+

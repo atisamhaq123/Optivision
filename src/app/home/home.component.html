@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+  <div *ngIf="loaded">
+
+  
+    <!-- Hero Section -->
+    <section class="container-fluid hero mt-3">
+        <div class="row mt-2 mb-2">
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="px-1 mx-1">
+                <h1 class="display-5">Welcome</h1>
+                <p class="">A cutting-edge image tagging and face detection platform to transform your images. Explore services below.</p>
+                <a href="#services" class="btn btn-primary btn-lg mb-2">Learn More</a>
+            </div>
+        </div>
+            <div class="col-lg-6">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg" alt="Artificial intelligence" class="img-fluid rounded" />
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container services mt-2 mb-3">
+      <h2 class="mb-4">Services</h2>
+        <div class="row">
+            <div class="col">
+              <a routerLink="/Tagging" class="tagLink">
+                <div class="card rounded">
+                  <img src="assets/audio.png" class="card-img-top" alt="Image Tagging">
+                  <div class="card-body">
+                      <h5 class="card-title">Image Tagging</h5>
+                      <p class="card-text">Enhance your images with descriptive tags with cutting-edge ai</p>
+                      
+                    </div>
+              </div>
+              </a>
+                
+            </div>
+            <div class="col">
+              <a routerLink="/Detection" class="tagLink">
+                <div class="card rounded">
+                    <img src="https://www.timetrak.com/wp-content/uploads/2022/04/Futuristic-and-technological-s.jpg" class="card-img-top" alt="Face Detection">
+                    <div class="card-body">
+                        <h5 class="card-title">Face Detection</h5>
+                        <p class="card-text">Identify faces in photos for various applications.</p>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <!-- Add more service cards as needed -->
+        </div>
+    </section>
+    <div class="container py-5">
+        <div class="row">
+          <h2 class="">My goals</h2>
+            <div class="col-auto d-flex align-items-center">
+                <div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="fa fa-check-circle text-primary me-2"></i>
+                      Advance AI research and development.
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle text-primary me-2"></i>
+                      Apply AI solutions to real-world problems.
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle text-primary me-2"></i>
+                      Enhance machine learning algorithms.
+                    </li>
+                    <li>
+                      <i class="fa fa-check-circle text-primary me-2"></i>
+                      Collaborate with experts in the field.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          <div class="col-auto">
+            <img src="assets/profile.PNG" alt="AI Expert" class="img-fluid rounded-circle">
+          </div>
+          <div class="col-auto mt-2">
+            <h2 class="">Why to use it</h2>
+
+            Optivision is a revolutionary image tagging and face detection platform that leverages cutting-edge artificial intelligence (AI) and machine learning technologies to transform your visual content. Optivision is designed to enhance your images with descriptive tags, providing a sophisticated image tagging service that brings unparalleled precision and context to your digital assets. Our advanced machine learning algorithms power the Image Tagging service, ensuring that your images are not merely seen but comprehensively understood through intelligent tagging. Moreover, Optivision's Face Detection service enables seamless identification of faces in photos, opening doors to a myriad of applications in facial recognition technology. Stay at the forefront of visual innovation with Optivision, where vision meets the future through state-of-the-art AI and machine learning capabilities. Elevate your image processing experience and explore the limitless possibilities that Optivision brings to the world of visual content transformation.
+          </div>
+         
+        </div>
+      </div>
+      
+      
+  </div>
+</body>
+</html>
