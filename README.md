@@ -6,7 +6,7 @@ Optivision is a revolutionary image tagging and face detection platform that lev
 
   - Get API from [Imagga](https://imagga.com/).
   - Setup "api_key" and "api_secret" in flask api python file.
-  - Make account on [PythonAnyWhere](https://www.pythonanywhere.com/)
+  - Make account on (https://www.pythonanywhere.com/)
   - Upload your flask api python file there.
   - Get live website link from there  like this (https://atisam12121.pythonanywhere.com)
   - Edit "Imagga.service.ts" file and change this link with your new link.
